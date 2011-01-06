@@ -1,0 +1,6 @@
+[submodule "tests/lib/test_it"]
+	path = tests/lib/test_it
+	url = git://github.com/DouglasMeyer/test_it.git
+[submodule "tests/lib/mock_it"]
+	path = tests/lib/mock_it
+	url = git://github.com/DouglasMeyer/mock_it.git
