@@ -805,7 +805,7 @@ cli.forEachStdinLine = function (encoding, callback) {
     processData = function (eof) {
         if (sep === undefined && data.indexOf('\r\n') !== -1) sep = '\r\n';
         if (sep === undefined && data.indexOf('\n') !== -1) sep = '\n';
-        if (sep) {
+        if (sep || eof) {
             var lines = data.split(sep);
             data = eof ? null : lines.pop();
             lines.forEach(function (line) {

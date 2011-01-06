@@ -44,6 +44,7 @@ TestIt('cli.forEachStdinLine', {
     });
 
     mockStream.mockRun(chunks);
+    t.assertEqual(0, expected.length, 'We are still expecting lines.');
   },
 
   'should work with no line separator': function(t){
@@ -63,6 +64,7 @@ TestIt('cli.forEachStdinLine', {
     });
 
     mockStream.mockRun(chunks);
+    t.assertEqual(0, expected.length, 'We are still expecting lines.');
   },
 
   'should work with incomplete chunks': function(t){
@@ -80,5 +82,6 @@ TestIt('cli.forEachStdinLine', {
     });
 
     mockStream.mockRun(chunks);
+    t.assertEqual(0, expected.length, 'We are still expecting lines.');
   }
 }, MockIt, TestIt.NodeReporter);
